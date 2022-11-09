@@ -48,7 +48,8 @@ jobs:
         docker tag $BACKEND_APP_NAME $BACKEND_IMAGE_ID:${GITHUB_RUN_ID}
         docker push $BACKEND_IMAGE_ID:${GITHUB_RUN_ID}
 
-        FRONTEND_IMAGE_ID=ghcr.io/${{ github.repository_owner }}/container-apps/$FRONTEND_APP_NAME
+        # FRONTEND_IMAGE_ID=ghcr.io/${{ github.repository_owner }}/container-apps/$FRONTEND_APP_NAME
+        FRONTEND_IMAGE_ID=ghcr.io/sychell/container-apps/$FRONTEND_APP_NAME
         docker tag $FRONTEND_APP_NAME $FRONTEND_IMAGE_ID:${GITHUB_RUN_ID}
         docker push $FRONTEND_IMAGE_ID:${GITHUB_RUN_ID}
 
