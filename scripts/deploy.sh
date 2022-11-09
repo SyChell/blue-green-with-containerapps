@@ -1,7 +1,7 @@
 !/bin/bash
 
 set -e
-
+#comment
 # az extension remove -n containerapp
 EXTENSION=$(az extension list --query "[?contains(name, 'containerapp')].name" -o tsv)
 if [ "$EXTENSION" = "" ]; then
